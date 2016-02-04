@@ -1,0 +1,8 @@
+<?php
+	$xml=simplexml_load_file("vac_profile.xml") or die("Error: Cannot create object");
+	
+	foreach($xml->children() as $commands) 
+	{ 
+		echo $commands->command['name'] . "<br>"; 
+	} 
+?>
